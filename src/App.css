@@ -1,38 +1,120 @@
-.App {
-  text-align: center;
+button {
+    background-color: #050f55;
+    padding: 10px 40px;
+    border: none;
+    color: #f3e1e1;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 0px 5px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button:hover {
+    background-color: #8f9fec;
+    transition: all 0.25s;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.group-search {
+    position: relative;
+    display: inline-block;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.group-search input {
+    padding: 2px 5px;
+    font-size: 1rem;
+    outline: none;
+    border: 2px solid rgba(10, 10, 10, 0.856);
+    border-radius: 5px;
 }
 
-.App-link {
-  color: #61dafb;
+.group-search input:focus {
+    border: 2px solid #213fd6;
+    box-shadow: 2px 4px rgba(0, 0, 0, 0.7);
+    transition: all 0.25s;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.group-search input::after {
+    font-family: "Font Awesome 5 Free";
+    font-weight: 900;
+    content: "\f002";
+}
+
+.group-search label {
+    margin-right: 10px;
+}
+
+.group-search i {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    color: #434343;
+}
+
+.combobox {
+    display: inline-block;
+    width: 150px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.combobox select,
+.combobox option {
+    padding: 2px 8px;
+    font-size: 16px;
+}
+
+.popup-tooltaps {
+    display: flex;
+    justify-content: center;
+    position: relative;
+    margin-left: 200px;
+}
+
+.popup-tooltaps button {
+    margin-bottom: 20px;
+    width: 120px;
+    padding: 5px 15px;
+}
+
+.toolTaps {
+    display: inline-block;
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    height: 170px;
+    width: 300px;
+    display: none;
+    flex-wrap: wrap;
+    position: absolute;
+    top: 40px;
+    left: 35%;
+}
+
+.toolTaps i.fa-caret-up {
+    position: absolute;
+    font-size: 50px;
+    top: -33px;
+    left: 180px;
+}
+
+.toolTaps .group-search {
+    justify-self: flex-end;
+    padding-left: 10px;
+}
+
+.toolTaps .group-search input {
+    box-shadow: none;
+}
+
+.container-tooltaps {
+    width: 100%;
+    align-self: flex-end;
+    height: 80%;
+}
+
+table.list {
+    border: 1px solid #ccc;
+    height: 100%;
+    overflow: scroll;
+    display: block;
+    width: 100%;
 }
