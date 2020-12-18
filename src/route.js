@@ -12,9 +12,9 @@ function MapRoute(){
     return(
         <Router>
           <Switch>
-            {/* <Route exact path="/">
+            <Route exact path="/">
                 <Redirect to="/Login" /> :
-            </Route> */}
+            </Route>
             <Route exact path="/Login" component={Login} />
             <Route exact path="/home" component={Home} />
             <Route exact path="/test1" component={Test1} />

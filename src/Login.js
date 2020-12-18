@@ -1,8 +1,9 @@
 
 import logo from './logo192.png'
 import Form from 'react-bootstrap/Form'
-import { Redirect } from 'react-router-dom'
-import { Button, Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink  } from 'reactstrap';
+import Button from 'react-bootstrap/Button'
+import { Redirect, Route } from 'react-router-dom'
+import { Card, CardBody, CardGroup, Col, Container, Input, InputGroup, InputGroupAddon, InputGroupText, Row, NavLink  } from 'reactstrap';
 
 function Login(){
     return (
@@ -20,7 +21,7 @@ function Login(){
                         <div className="title-login">
                            ĐĂNG NHẬP
                         </div>
-                        <Form className="form-login" onSubmit={submit}>
+                        <Form className="form-login">
                             <Form.Group controlId="formBasicEmail" className="group-login">
                                 <Form.Label>Username</Form.Label>
                                 <Form.Control type="text" placeholder="Username" />
@@ -55,12 +56,12 @@ export default Login;
 function submit(){
     return false;
 }
-function goHome() {
-    console.log('aaaa');
-    
-    <Redirect to="/home"/>
-}
+
 function handleClick () {
     window.location = "/home";
-    <Redirect to="/home"/>
+    console.log('aaa');
+    // <Route>
+    //     <Redirect to="/home"/>
+    // </Route>
+   
   }
